@@ -5,7 +5,7 @@ Angular CLI Docker Image
 `docker run -it --rm -v $(pwd)/app skypress/ng-cli:latest `
 
 ## Notes
-- Base image is `node:12-alpine`
+- Base image is `skypres/npx:latest`
 - Everything is ran as the `node` user
 - Includes `@angular/cli` globally
 - `/app` is the default `WORKDIR`

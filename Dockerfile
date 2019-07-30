@@ -1,15 +1,10 @@
-FROM node:12-alpine
+FROM skypress/npx:latest
 
-# Create Working Directory
-RUN mkdir -p /app && \
-  chown node:node /app
+# Use root user
+USER root
 
-# Set Working Directory
-WORKDIR /app
+# Install angular cli
+RUN npm install -g @angular/cli
 
-# Install npx globally
-RUN su node && \
-  npm install -g @angular/cli
-
-# Use the node user
+# End with node user
 USER node
